@@ -15,6 +15,8 @@ openstack router add subnet stupidRouter subnet3
 openstack router add subnet stupidRouter presidentialSubnet
 openstack router add subnet stupidRouter graySubnet
 openstack router set --external-gateway MAIN-NAT stupidRouter
+openstack keypair delete grayKey
+openstack keypair create --private-key ~/.ssh/id_rsa grayKey
 net1=$(openstack network show -c id -f value network1)
 net2=$(openstack network show -c id -f value network2)
 net3=$(openstack network show -c id -f value network3)

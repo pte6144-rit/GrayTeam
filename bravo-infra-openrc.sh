@@ -24,10 +24,12 @@ unset OS_TENANT_ID
 unset OS_TENANT_NAME
 # In addition to the owning entity (tenant), OpenStack stores the entity
 # performing the action as the **user**.
-export OS_USERNAME="pte6144"
+echo "Please enter your OpenStack Username"
+read -r OS_USERNAME_INPUT
+export OS_USERNAME=$OS_USERNAME_INPUT
 # With Keystone you pass the keystone password.
 echo "Please enter your OpenStack Password for project $OS_PROJECT_NAME as user $OS_USERNAME: "
-read -sr OS_PASSWORD_INPUT
+read -r OS_PASSWORD_INPUT
 export OS_PASSWORD=$OS_PASSWORD_INPUT
 # If your configuration has multiple regions, we set that information here.
 # OS_REGION_NAME is optional and only valid in certain environments.

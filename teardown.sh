@@ -20,4 +20,4 @@ openstack network delete presidentialNetwork
 openstack server remove fixed ip Control 10.1.100.11
 openstack network delete grayNetwork
 rm ~/.ssh/known-hosts
-
+openstack keypair delete grayKey
